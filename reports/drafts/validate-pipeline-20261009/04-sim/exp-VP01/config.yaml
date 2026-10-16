@@ -1,0 +1,102 @@
+# ============================================================
+#  config.yaml — exp-VP01 · R3-NeuTraL 三路线中立对照(dry-run 验证)
+#  由 ④ SimRunner 套用 experiment-runner/references/freeze-template 实例化。
+#  纪律:全部超参写死,无隐藏默认;冻结后不静默改,改动=新 exp-id。
+#  ⚠️ dry-run:本 config 为真实备料,但 ④ 不真实执行(无 GPU);results 为占位交 ⑥。
+# ============================================================
+
+exp_id: exp-VP01
+method_name: R3-NeuTraL
+
+# --- 配置口径(硬要求:防跨配置迁移,⑥ 审计据此核) ---
+config_caliber:
+  embodiment: unimanual              # LIBERO-Pro = 单臂 Franka;不得当 bimanual 引用
+  simulator: libero                  # LIBERO-Pro 官方评测栈(基于 robosuite/LIBERO)
+  simulator_version: "LIBERO-Pro-2510.03827v2"
+  benchmark: LIBERO-Pro
+  benchmark_version: "1648-variants-official"   # 官方 22 static + 20 runtime interventions
+  robot: franka_panda
+  note: "single-arm; 冻结子集 N=300 分层抽样(种子固定);非官方全量 1648"
+
+# --- 评测口径(metric 定义,⑥/⑧ 据此核数字-结论一致) ---
+metrics:
+  primary: success_rate
+  primary_units: percent
+  secondary:
+    - recovery_rate                  # Gap-2 恢复轴:首次失败后仍终局成功的回合占比
+    - first_failure_step             # 错误累积:首次失败步索引
+    - recovery_latency_llmcalls      # 恢复延迟(LLM 调用数)
+    - task_wipeout_rate              # 任务级全灭率(reward coverage 补集,借 SynthDemo-RL)
+    - llm_calls_per_episode          # 成本轴
+    - tokens_per_episode             # 成本轴
+    - wallclock_per_episode          # 成本轴
+  eval_episodes: 50                  # 官方协议:每任务 50 回合(基准卡 v2 PDF §5.1 逐字)
+  success_criteria: "official LIBERO-Pro task goal state reached"
+
+# --- 随机种子(硬要求:≥3,单 seed 不得当结论) ---
+seeds: [0, 1, 2, 3, 4]               # 5 seeds;与 seeds.txt 一致
+
+# --- 冻结子集抽样(回应 ①待核#8:规则公开,否则自己变第 10 种分母) ---
+frozen_subset:
+  total_variants: 300
+  sampling: stratified_by_perturbation_category
+  strata: [scene, object, visual, robot_state, temporal, instruction, runtime_intervention]
+  sampling_seed: 20261009
+  rule_public: true                  # 抽样规则/配额/纳排判据写入协议工件并开源
+
+# --- 执行矩阵(三臂 + 基线对齐 + 消融,同子集/同预算/同 seed 数) ---
+matrix:
+  method:                            # 三臂(平等,非谁当基线)
+    - name: R3_vla_frozen            # 臂 A 端到端 VLA(开权重,冻结)
+      arm: end_to_end_vla
+      backbone: "pi0.5 (open-weights, frozen)"
+      trainable_backbone: true
+      hyperparams: {eval_only: true}
+    - name: R3_harness               # 臂 B agentic harness(闭源前沿 VLM)
+      arm: agentic_harness
+      backbone: "frontier VLM (public identity, version-locked)"
+      trainable_backbone: false
+      budget: {max_llm_calls_per_episode: 8, max_tokens: 32000}
+    - name: R3_cap                   # 臂 C code-as-policy
+      arm: code_as_policy
+      backbone: "frontier VLM planner + public primitive library"
+      trainable_backbone: false
+      budget: {max_llm_calls_per_episode: 8, max_tokens: 32000}
+  baseline:                          # 基线对齐性检验(①Gap-1 最小实验:验 12.8/17.5/13.3 冲突)
+    - name: baseline_align_pi05
+      arm: end_to_end_vla
+      backbone: "pi0.5 frozen (same as arm A)"
+      purpose: "check if one frozen VLA can simultaneously approach 12.8%/17.5%/<=13.3% reported by Pigey/DynaHarness/MotorMind"
+      hyperparams: {eval_only: true}
+  ablation:                          # 去掉恢复轴,证其增量信息
+    - name: R3_no_recovery_axis
+      arm: all_three
+      ablate: recovery_and_cost_axes
+      note: "只报终局成功率,对照是否丢失路线判别信息"
+
+# --- 恢复轴测量装置(复用已发表装置,不自建) ---
+recovery_probe:
+  method: "State-Locked Counterfactual Branching (RoboAware, arXiv:2610.11480)"
+  runtime_interventions: "官方 20 类 runtime intervention 作恢复测试床"
+
+# --- 训练/评测环境 ---
+env:
+  gpu: "cuda:0 (dry-run 未执行)"
+  num_envs: 64
+  max_steps_per_episode: 400
+  obs_resolution: [128, 128]
+  data_source: "LIBERO-Pro frozen subset N=300 (no demos for perturbed tasks)"
+
+# --- 实验追踪 ---
+tracking:
+  tool: wandb
+  project: r3-neutral-libero-pro
+  log_every: 100
+
+# --- 预算(🔴 云/API 开销超锚点须人明示) ---
+budget:
+  est_rollouts: 225000               # 300×50×3臂×5seed(冻结子集,已比全量收窄)
+  est_gpu_hours: 120
+  closed_source_api_cost: true       # 臂 B/C 依赖闭源前沿 VLM
+  cloud: true
+  budget_approved_by_human: false    # 🔴 dry-run 未执行;真实跑前须委托人明示预算锚点

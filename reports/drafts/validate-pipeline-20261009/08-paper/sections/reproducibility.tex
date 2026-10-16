@@ -1,0 +1,21 @@
+% ============================================================
+%  reproducibility.tex — 复现声明(被 appendix.tex \input)
+%  纪律:代码/数据/超参可获取性如实声明;开源链接提交前由人确认(🔴 对外发布)。
+% ============================================================
+
+% 若期刊用独立 reproducibility checklist(如 NeurIPS/RA-L),按其字段逐项填。
+\textbf{Code.} Our training and evaluation code, including all configs used to
+produce the reported numbers, is available at \url{<repo>} — \textcolor{red}{[开源链接与是否公开由委托人确认]}。
+
+\textbf{Data.} Teleoperated / simulation data used in this work are
+\ldots (available at \url{<link>} / not released due to \ldots). % 如实,不空承诺
+
+\textbf{Hyperparameters.} Full hyperparameters, environment versions, and random
+seeds are listed in Appendix~\ref{app:impl}; each reported number maps to a
+frozen config under \texttt{tests/exp-<id>/}.
+
+\textbf{Compute.} Experiments were run on \ldots (approx. \ldots GPU-hours).
+
+\textbf{Reproducibility note.} Numbers in this paper were produced by frozen
+configs (commit \texttt{<hash>}) and audited for full-caliber consistency
+(including unfavorable results) before citation.

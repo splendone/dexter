@@ -1,0 +1,13 @@
+# env-lock.txt — exp-VP01 环境快照(dry-run:未真实执行,以下为应记录的目标栈)
+# 真实跑时 run.sh 会自动覆写为实抓快照;此处为备料占位,示明应记哪些。
+torch <待真实执行时记录>
+numpy <待记录>
+cuda <待记录>
+python <待记录>
+libero-pro <官方评测栈 commit,待锁定>
+robosuite <版本待记录>
+wandb <版本待记录>
+# 闭源 VLM 骨干(臂 B/C):身份 + 版本 + 调用日期须锁定并记录(否则不可复现)
+#   arm_B_backbone: frontier-VLM <version-locked, 调用日期 YYYY-MM-DD>
+#   arm_C_planner:  frontier-VLM <version-locked, 调用日期 YYYY-MM-DD>
+# GPU: 目标 A100/H100(dry-run 未执行)

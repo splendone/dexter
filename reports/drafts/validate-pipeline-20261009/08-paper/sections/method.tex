@@ -1,0 +1,47 @@
+% ============================================================
+%  method.tex — 方法:可复现细节充足,读者能照做
+%  纪律:公式符号一致;架构/损失/超参齐全;区分「方法本身」与「实现选择」。
+% ============================================================
+
+\section{Method}
+\label{sec:method}
+
+% [问题形式化] 记号定义(POMDP / 策略 π(a|o) 等),符号全篇一致。
+\subsection{Problem Formulation}
+We consider \ldots. Let $o_t$ denote \ldots and $a_t$ denote \ldots.
+The goal is to learn a policy $\pi_\theta(a_t \mid o_t, \ell)$ conditioned on
+language instruction $\ell$ \ldots
+
+% [方法总览] 配架构图(见 ⑦ figure-builder, diagram 类)。
+\subsection{Overview}
+Figure~\ref{fig:pipeline} illustrates MethodName, which consists of \ldots
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{pipeline}
+  \caption{Overview of MethodName. \ldots (caption 须自解释)}
+  \label{fig:pipeline}
+\end{figure}
+
+% [核心组件] 逐个讲清提出的模块;每个组件对应后文一个消融。
+\subsection{Component 1: <名称>}
+\ldots
+\begin{equation}
+  \mathcal{L} = \ldots
+  \label{eq:loss}
+\end{equation}
+
+\subsection{Component 2: <名称>}
+\ldots
+
+% [训练/推理] 算法伪代码(algorithm 环境);关键超参见附录,不散落正文。
+\subsection{Training and Inference}
+\begin{algorithm}[t]
+\caption{MethodName Training}
+\begin{algorithmic}[1]
+\STATE \ldots
+\end{algorithmic}
+\end{algorithm}
+
+% [实现选择 vs 方法本质] 明确哪些是可替换的工程选择,避免过度声称普适性。
+\paragraph{Design choices.} We emphasize that \ldots is an implementation choice,
+whereas \ldots is central to the method.

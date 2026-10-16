@@ -1,0 +1,9 @@
+round	date	goal	hypothesis	action	artifact	verdict	cost	note
+001	2026-10-15	G1	「对撞缺席」全称裁决被部分证伪后,能否分层重写并保持四件综合级产物口径一致	按分层定案重写透镜③与总图并升版	reports/final/文献地图-透镜③-语言条件长程操作-v1.md(v1.1.2); reports/final/文献地图-v0.1.md(v1.1.2)	advance	中	定点联动更正,体检钟不重置
+002	2026-10-15	G1	领域级图谱 Phase 2 剩余四支能否补齐至七分支全覆盖	派 2 路异路径子 agent 深挖分支①⑤⑥⑦	reports/drafts/领域科研路径图谱-Phase2-分支①⑤⑥⑦深挖-v0.1.md	advance	高	全文级精读 7 篇 + ~50 篇 venue 核实
+003	2026-10-15	G1	骨干图谱 §8.5 的 8 处跨源口径分歧能否定案	异路径子 agent 核 Isaac Gym / HumanPlus / Domain Randomization 的 venue	reports/drafts/领域科研路径图谱-v0.1.md(§8.5); knowledge/maps/controversies.md	advance	中	新判例入 lessons:arXiv comment ≠ venue
+004	2026-10-15	G1	图谱系列能否补齐权威性检验(记分卡唯一全支共缺)	派 1 子 agent 实抓 24 次 HTTP 200,新增 N1-N7 定案	reports/drafts/领域级图谱-权威性检验记录-v0.1.md	advance	高	7/7 引外部原始源;另捕获 2 处 draft 更正
+005	2026-10-15	G2	研究纲领重定向(从找方法缺口到交付可信测量)能否落成可执行规格	四次新颖性核查 + 立项前硬门(5 篇全文级)+ 起草规格书 v0.1	designs/检索式策略设计空间自主搜索与可信测量-规格书-v0.1.md; reports/drafts/研究纲领重定向-从找方法缺口到交付可信测量-v0.1.md	advance	高	定题门四项全过;A-019~A-029 入账;未签发
+006	2026-10-15	G1	STRAP 张冠李戴是否只影响个别件	主会话独立 curl 确证 + 2 子 agent 并行更正全图谱系列	reports/drafts/领域科研路径图谱-*.md(约 19 处); knowledge/maps/lessons.md	advance	高	证伪为系统性错误(贯穿操作级系列);4 项 stale 留签发前 must-fix
+007	2026-10-16	制度	对标 autoresearch 能否给出「组织侧」可迁移机制	源码级工程解析 + 差距映射 + 起草优化方案 v0.1 + 独立复核 FAIL→6 处修正	reports/drafts/优化方案-autoresearch对标-常驻科研循环-v0.1.md	advance	高	本件即 rounds.tsv 的建账轮
+008	2026-10-16	制度	对标 system_prompts_leaks 第二遍能否给出 10-08 未取的「观察者与复核分档」机制	源码级解析 reminders 六族 + code-review 六档公式 + agents 能力边界 + loop 管家框架 + Muse 路由头;逐条去重对照 10-08 的 M1-M10;甲档 A1/A2 落地;起草 v0.1;派独立子任务会签前自查复核(异检索路径 git/blobs + 网页版)	reports/final/优化方案-对标system_prompts_leaks-观察者与复核分档-v1.md; proposals.md(P-019~P-023); heartbeat.md; identity.md/goals.md/agenda.md/promises.md	advance	高	独立复核 Verdict=FAIL → 9 处实质问题全部修正(1 归属错 + 3 计数/口径 + 1 事实 + 1 未立案 + 1 无据细节 + 2 无源),0 处涉结论方向;另修正 index.md 产物索引 stale 计数

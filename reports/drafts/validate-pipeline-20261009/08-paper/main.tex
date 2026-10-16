@@ -1,0 +1,63 @@
+% ============================================================
+%  main.tex — 具身智能 SCI 论文骨架(期刊无关)
+%  用法:cp -R references/latex-skeleton/* reports/drafts/paper-<id>/
+%        再把 \documentclass 换成目标期刊官方模板(见 references/journal-templates.md)
+%  纪律:每个数字回指 ⑥ 审计、每个主张回指来源;未审计数字用 \audittodo{} 占位,禁写死。
+% ============================================================
+
+% --- RA-L / T-RO 用 IEEEtran;IJRR 用 SAGE;按期刊替换下面这行 ---
+\documentclass[journal]{IEEEtran}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}          % 三线表
+\usepackage{siunitx}           % 单位与数字对齐
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{subcaption}        % 定性图/失败案例并排
+\usepackage[numbers,sort&compress]{natbib} % IEEEtran 数字引用;按期刊调整
+
+% --- 诚实闸宏:未过 ⑥ 审计的数字一律占位,不得写死 ---
+\newcommand{\audittodo}[1]{\textcolor{red}{[AUDIT-TODO: #1]}}
+% dry-run:⑥ 对 exp-VP01 签发 ❌(数据 PLACEHOLDER)→ 全文数字一律 \audittodo{},禁写死。
+% 真实运行示例格式:成功率 \num{XX.X}\% \pm \num{Y.Y}  % <- tests/exp-<id>, ⑥ 签发✅ 日期, 配置口径
+
+\graphicspath{{figures/}}
+
+\begin{document}
+
+% 🔴 署名/单位由人确定,AI 不擅自填写 —— 保留占位,提交前须委托人明示
+\title{Paper Title Here\\ \vspace{2pt}
+\large (working title — 由委托人/作者定稿)}
+\author{%
+  \IEEEauthorblockN{Author One\IEEEauthorrefmark{1}, Author Two\IEEEauthorrefmark{2}}
+  \IEEEauthorblockA{\IEEEauthorrefmark{1}Affiliation One — \textcolor{red}{[署名待委托人确认]}}
+  \IEEEauthorblockA{\IEEEauthorrefmark{2}Affiliation Two — \textcolor{red}{[署名待委托人确认]}}
+}
+\maketitle
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\begin{IEEEkeywords}
+manipulation, dexterous hands, robot learning, \ldots % 按期刊关键词数
+\end{IEEEkeywords}
+
+\input{sections/intro}
+\input{sections/related}
+\input{sections/method}
+\input{sections/experiments}
+\input{sections/conclusion}
+
+% --- 附录:复现材料(见 reproducibility.md) ---
+\appendix
+\input{sections/appendix}
+
+% --- 参考文献:来自 refs.bib(构建规范见 references/refs-bib-guide.md,零虚构) ---
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

@@ -1,0 +1,25 @@
+graph TD
+    BOTTLENECK["顶层共同瓶颈<br/>真实机器人数据稀缺·昂贵<br/>科学问题:如何突破数据瓶颈获得可泛化操作能力?"]
+
+    BOTTLENECK --> Q["数据量 quantity"]
+    BOTTLENECK --> M["数据形态/信号 modality"]
+    BOTTLENECK --> S["数据结构/复用 structure·reuse"]
+
+    Q --> R1["路线① 规模·端到端VLA<br/>RT-1·RT-2·OXE·OpenVLA·π0·π0.5·RDT·GR00T<br/>数据:DROID·BridgeV2·AgiBot"]
+    Q --> R2["路线② 合成·仿真/Real2Sim2Real<br/>Isaac Gym·RoboCasa·MimicGen·DexMimicGen<br/>RialTo·ZeroBot·DEXTERA·D-REX"]
+    M --> R3["路线③ 人类数据<br/>UMI·HumanPlus·DexMV<br/>Morphometric·DexRoam·Praxis"]
+    M --> R7["路线⑦ 触觉多模态·正交使能<br/>GelSight·WhenDoesTouchMatter<br/>WAM系·OpenViTac·PHASE"]
+    S --> R4["路线④ 结构先验/检索 ★MT3所属<br/>ACT·DiffusionPolicy·One-Shot IL(Vitiello,CoRL2023)<br/>BehaviorRetrieval·FlowRetrieval·MT3"]
+    S --> R5["路线⑤ agentic资产外化<br/>SayCan·CodeAsPolicies·InnerMonologue·ProgPrompt<br/>WAA·K1·RAPID·RACaP·HarnessVLA"]
+    S --> R6["路线⑥ 数据翻新回收<br/>DataQualityIL·QoQ·ε4P·Kintsugi·Fail2Progress"]
+
+    R4 --> MT3["★ MT3 (Science Robotics 2025)<br/>免训练检索+分解·1演示/任务·1000任务/17h·Sawyer"]
+    MT3 -.向上谱系.-> ONESHOT["One-Shot IL (Vitiello, CoRL 2023, 2310.12077)<br/>MT3位姿对齐上游(⚠️同门/规模化版待核;原误标 STRAP)"]
+    MT3 -.向下·缺口②闭环.-> DOWN1["BPC·RTCF (闭环纠错)"]
+    MT3 -.向下·缺口①触觉.-> DOWN2["PHASE (触觉相位检索)"]
+    MT3 -.向下·缺口③跨本体.-> DOWN3["Retrieve-Don't-Retrain (逼近未填)"]
+    MT3 -.向下·缺口④检索.-> DOWN4["IWR·DARP (度量改进)"]
+    MT3 -.桥接.-> R5
+
+    R1 & R2 & R3 & R4 & R5 & R6 & R7 --> COLLIDE["对撞层(横跨七路线的评测层)<br/>RoboDojo·RoboCasa365榜·LIBERO-PRO·BiGym2.0·vla-eval<br/>殊途同归+一个预算配平对撞兜底→任务族×路径条件表"]
+    COLLIDE --> GOAL["顶层科研目标<br/>可泛化·数据高效的操作能力<br/>+ 什么任务走什么路径的条件表"]

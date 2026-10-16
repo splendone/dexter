@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# 本地时点快照备份（冗余副本，非项目内容）
+.backup/
+.backups/
+build-backup-*/
+
+# 编辑器 / 工具临时文件
+*.swp
+*~

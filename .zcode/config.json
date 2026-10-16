@@ -1,0 +1,30 @@
+{
+  "hooks": {
+    "enabled": true,
+    "events": {
+      "SessionStart": [
+        {
+          "hooks": [
+            {
+              "type": "command",
+              "command": "bash \"${ZCODE_PROJECT_DIR}/Dexter/.zcode/hooks/session-start.sh\"",
+              "timeout": 5
+            }
+          ]
+        }
+      ],
+      "PostToolUse": [
+        {
+          "matcher": "Write|Edit",
+          "hooks": [
+            {
+              "type": "command",
+              "command": "bash \"${ZCODE_PROJECT_DIR}/Dexter/.zcode/hooks/toollog.sh\"",
+              "timeout": 5
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

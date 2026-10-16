@@ -1,0 +1,80 @@
+% ============================================================
+%  experiments.tex — R3-NeuTraL(dry-run 验证;数字全 \audittodo 占位)
+%  纪律:⑥ ResultsAuditor 对 exp-VP01 签发 ❌(数据 PLACEHOLDER)→ 正文数字
+%        一律 \audittodo{},禁写死(呼应 paper-writer §1 前置门 + ⑥§9 放行去向)。
+% ============================================================
+
+\section{Experiments}
+\label{sec:exp}
+
+\subsection{Experimental Setup}
+\paragraph{Benchmark.} We evaluate on \textsc{LIBERO-Pro}~\cite{liberopro2025}
+(official 1{,}648 perturbation variants), using a \emph{stratified frozen subset}
+of $N{=}300$ variants (sampling seed 20261009, rules public), \emph{single-arm}
+(Franka Panda) configuration. % 配置口径:单臂,与 ⑥§4 一致,防跨配置迁移
+\paragraph{Three arms (equal, not baseline-subordinate).}
+(A) end-to-end VLA ($\pi_{0.5}$ frozen, open-weights);
+(B) agentic harness (version-locked frontier VLM);
+(C) code-as-policy (same VLM planner + public primitive library).
+\paragraph{Protocol.} 50 episodes/task (official protocol); unified budget
+($\leq$8 LLM calls/episode); metrics: success rate, recovery rate, first-failure
+step, recovery latency, task-wipeout rate, cost (LLM calls/tokens/wallclock).
+\paragraph{Seeds.} $N{=}\,$\audittodo{exp-VP01 seed 数} seeds; mean $\pm$ std.
+
+\subsection{Main Results}
+\begin{table}[t]
+\centering
+\caption{Three-arm neutral comparison on \textsc{LIBERO-Pro} frozen subset
+(single-arm, $N{=}300$). \textbf{All numbers PLACEHOLDER (dry-run); audit signed
+\texttt{NOT-CLEARED}.} Best in bold.}
+\label{tab:main}
+\begin{tabular}{lccc}
+\toprule
+Arm & Success (\%)$\uparrow$ & Recovery (\%) & Cost (LLM calls) \\
+\midrule
+(A) end-to-end VLA (frozen)   & \audittodo{exp-VP01/R3_vla_frozen} & \audittodo{} & \audittodo{} \\
+(B) agentic harness           & \audittodo{exp-VP01/R3_harness}    & \audittodo{} & \audittodo{} \\
+(C) code-as-policy            & \audittodo{exp-VP01/R3_cap}        & \audittodo{} & \audittodo{} \\
+\bottomrule
+\end{tabular}
+\end{table}
+% 措辞纪律(⑥§2):配对 n=5 检验力不足 → 禁写「B 显著优于 A」,即使占位差 +26.8pp。
+Arm (B) shows a descriptive margin over (A) of \audittodo{delta}; however, with
+$n{=}5$ paired seeds the permutation test cannot reach $p<0.05$ (min achievable
+$p=0.0625$), so we \emph{do not} claim statistical significance and defer to
+additional seeds (see Sec.~\ref{sec:limit}).
+
+\subsection{Baseline-Alignment Check}
+\label{sec:baseline}
+The same frozen $\pi_{0.5}$ yields \audittodo{exp-VP01/R3_vla_frozen} under our
+caliber vs.\ \audittodo{exp-VP01/baseline_align_pi05} under the alignment probe,
+against literature values 12.8\% / 17.5\% / $\leq$13.3\% (Pigey / DynaHarness /
+MotorMind, verified in Sec.~\ref{sec:related}). If $\geq$2 cannot be
+simultaneously approached, ``even the baseline is not comparable'' is confirmed
+--- the hardest evidence for the caliber-confusion thesis (Fig.~\ref{fig:spread}).
+
+\subsection{Caliber Confusion (real data)}
+Across 15 recent \textsc{LIBERO-Pro} reports the absolute success rate spans
+12.8\%--95.0\% with $\geq$9 mutually incompatible denominators
+(Fig.~\ref{fig:spread}); \emph{no two reports share a denominator}. These 15
+values are externally verified (arXiv/OpenReview, 2026-10-09), not placeholder.
+
+\subsection{Recovery and Cost Axes}
+\label{sec:recovery}
+Arms (B)/(C) show \audittodo{recovery vs A} recovery rate but
+\audittodo{latency} higher recovery latency; on object/position static
+perturbations the recovery gap \audittodo{vanishes?}. % 占位,待真实
+
+\subsection{Qualitative and Failure Cases}
+Representative rollouts and failure modes are shown in Fig.~\ref{fig:qual}
+(placeholder frames; real capture pending stage-4 execution).
+
+\subsection{Limitations}
+\label{sec:limit}
+(i) Cross-arm ``same backbone'' is physically infeasible (open-weight VLA vs
+closed frontier VLM); ``aligned caliber'' is redefined as same-generation
+strongest + public backbone identity + reported cost. (ii) $N{=}300$ frozen
+subset $\neq$ official full 1{,}648; conclusions are scoped to the subset.
+(iii) $n{=}5$ paired seeds are underpowered for significance claims.
+(iv) Null-result risk: if budget effect $\gg$ route effect, the finding becomes
+``route matters little, budget matters'' --- still falsifiable and publishable.

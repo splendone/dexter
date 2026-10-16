@@ -1,0 +1,3 @@
+# code-commit.txt — exp-VP01 代码版本(dry-run:未纳管执行,占位)
+# 真实跑时 run.sh 自动写 git commit hash;此处为备料占位。
+NOT-A-GIT-REPO: dry-run placeholder, snapshot 2026-10-09T13:00:00Z (未真实执行)

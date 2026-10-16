@@ -1,0 +1,35 @@
+% ============================================================
+%  appendix.tex — 附录:复现材料 + 额外结果 + 真机采集条件
+%  纪律:实现细节(超参/版本)集中此处;真机采集条件须与 ⑤ 记录一致(🔴 人签名)。
+% ============================================================
+
+\section{Implementation Details}
+\label{app:impl}
+% 训练/评测的全部超参、硬件、仿真器与 benchmark 版本(呼应 ④ 冻结目录)。
+\begin{itemize}
+  \item Simulator: \ldots (version \ldots); GPU: \ldots
+  \item Optimizer / lr / batch / epochs: \ldots
+  \item Random seeds: \ldots; number of seeds $N=$ \audittodo{}
+  \item Code commit: \texttt{<hash>}; config: \texttt{tests/exp-<id>/config.yaml}
+\end{itemize}
+
+\section{Additional Results}
+\label{app:more}
+% 完整结果表(含正文省略的、方差大的、不利的数字 —— 不 cherry-pick)。
+\ldots
+
+\section{Real-Robot Collection Details}
+\label{app:real}
+% 与 ⑤ realexec-checklist 的记录一致:硬件型号/固件、标定、遥操作方式、
+% episode 数与成功判据、操作者签名确认的采集条件。🔴 由人回填并签名。
+\begin{itemize}
+  \item Hardware: arm \ldots (firmware \ldots), hand \ldots
+  \item Calibration: hand-eye error \ldots (date \ldots)
+  \item Teleoperation: \ldots; operator sign-off: \textcolor{red}{[待人签名]}
+  \item Episodes: collected \ldots / success \ldots / failure \ldots
+  \item Deviations from protocol: \ldots (如实写)
+\end{itemize}
+
+% --- 复现声明(见 reproducibility.md,按期刊要求放置) ---
+\section*{Reproducibility Statement}
+\input{sections/reproducibility}

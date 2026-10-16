@@ -1,0 +1,29 @@
+graph TD
+    L4["L4 根:什么是智能/如何让机器有智能"]
+    L3["L3 祖父:智能是否必须具身?<br/>具身派:Brooks 1991 反表征·Harnad 1990 符号接地·Developmental Robotics<br/>离身派:GOFAI·Sense-Plan-Act"]
+    L2["L2 父·数据瓶颈的直接来处<br/>数据驱动ML范式(Sutton Bitter Lesson 2019,胃口=数据)<br/>× 具身性要求(物理交互数据无法爬取)<br/>= 碰撞出'数据瓶颈'"]
+    L1["L1 母:如何造出通用具身智能机器人?<br/>开放世界感知·推理·规划·行动·学习,跨任务/本体/环境"]
+    L0["L0 操作级顶层:如何突破数据瓶颈获得可泛化操作能力?<br/>(=操作支图谱根节点,七路线化解)"]
+
+    L4 --> L3 --> L2 --> L1 --> L0
+
+    L1 --> B1["分支① 感知<br/>Bajcsy主动感知·Gibson affordance·PointNet"]
+    L1 --> B2["分支② 认知/世界模型<br/>World Models·Dreamer系·PETS·VLA大脑"]
+    L1 --> B3["分支③ 行动/控制"]
+    L1 --> B4["分支④ 学习范式<br/>(数据瓶颈在此)"]
+    L1 --> B5["分支⑤ 本体/硬件<br/>人形·灵巧手·形态计算"]
+    L1 --> B6["分支⑥ 仿真/数据基建<br/>MuJoCo·Isaac·Habitat·DomainRand"]
+    L1 --> B7["分支⑦ 评测/安全/泛化(横切)<br/>对撞层在此"]
+
+    B3 --> B3a["③a 操作 Manipulation<br/>★已有放大图谱(七路线)"]
+    B3 --> B3b["③b 运动 Locomotion<br/>ANYmal·Walk-in-Minutes·Parkour·人形全身<br/>数据问题已被仿真+并行基本解决"]
+
+    L0 --> B3a
+    B4 --> B3a
+    B6 --> B3a
+    NOTE["数据瓶颈 = ③a操作 × ④学习 × ⑥仿真基建 交汇处<br/>且分支特异:操作难仿真(接触/形变/触觉)→瓶颈尖锐;运动易仿真→已解"]
+    B3a -.-> NOTE
+    B3b -.-> NOTE
+
+    B1 & B2 & B3 & B4 & B5 & B6 & B7 --> FRACTAL["分形元辩论:结构 vs 规模(Bitter Lesson)<br/>领域级↔认知↔操作(三力)↔数据↔运动 自相似重现<br/>+ 离身大脑vs具身闭环 + 仿真vs真实"]
+    FRACTAL --> GOAL["领域北极星:通用具身智能<br/>殊途同归(各支推进)+ 对撞层(条件表兜底)"]
