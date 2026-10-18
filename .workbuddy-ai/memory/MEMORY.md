@@ -18,6 +18,7 @@
 - **制度预算「一进一出」**：新增一行规程须删/停用一行，净增为零。只算根目录档案 + 技能；`reports/`、`journal/`、`knowledge/` 是产出，不计。
 - **「签发」= 内部定稿，不等于外部验证。**
 - **每次更新即提交并推送**（2026-10-18 委托人指令）：`git add -A && git commit && git push`，message 写清改了什么/为什么。**未提交或未推送等于不存在**（远端 `github.com/splendone/dexter`，分支 main）。
+- **推送必须走本地代理 `127.0.0.1:7890`**：直连 github 超时；沙箱默认 `HTTP(S)_PROXY=:56423` 对 github 返 502。`export https_proxy=http://127.0.0.1:7890 http_proxy=… all_proxy=socks5://127.0.0.1:7890` 后即可推。
 - 降档：**张冠李戴 1 次即降**（10-15 STRAP 已触发但未执行，欠账）。
 
 ## 调研架构 v3（2026-10-18 换底层架构）
