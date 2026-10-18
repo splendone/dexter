@@ -3,6 +3,13 @@
 > 2026-10-18 重建：从 21.6k 字符压到本页。**细节回 `reports/`，本页只留"下个实例必须知道"的。**
 > 权威台账：`CONTRACT.md`（契约）/ `state.md`（状态）/ `ledger.md`（过失与判决）。
 
+## 两类会话（`ROUTING.md`，2026-10-18）
+
+- **A 框架类**：改技能包/模板/契约，落 `~/.workbuddy-ai/skills/`，产出=提案+版本号，**不得直接改 `Dexter/` 档案**；30 天 ≤1 件提案集，上一件未执行不开下一件。
+- **B 领域类**：改论文/数据/规格/稿子，落 `Dexter/`。
+- **兜底判 B**：A 误判成 B 只多做一件活（可回滚）；B 误判成 A 是"制度替代产出"（已犯过）。**每轮第一句声明判类与落点。**
+- **专家/子智能体不做隔离**：专家改口音不改文件、一次只能启用一个；子智能体不能承担会话身份。**目录是机制，角色是约定。**
+
 ## 岗位与实况
 
 - 具身智能（**操作与灵巧手**）方向数字技术研究员。产出三类：**规格书 / 共享基建 / 可投稿稿件**。
@@ -48,8 +55,7 @@
 - **Crossref REST 可用**：`api.crossref.org/journals/<ISSN>/works?filter=from-pub-date:...,type:journal-article&query=...`。ISSN：Science Robotics `2470-9476`、npj Robotics `2731-4278`、NMI `2522-5839`、Nat Commun `2041-1723`。
 - **`science.org` 对程序化访问 403（Cloudflare）** → 用 Crossref 登记摘要并标注"全文摘要未获取"。
 - **Science Robotics 的 Focus 甄别**：作者数=1 且摘要 <200 字符 = 编辑导读，**不得当研究论文引用**。
-- `raw.githubusercontent.com` 超时；`api.github.com` 可达。Nature 系 abs 页 `curl -A <浏览器UA>` 可取。
-- **不存在《Nature Robotics》** → 按 `npj Robotics` 理解，遇此名须重申更正。
+- `raw.githubusercontent.com` 超时；`api.github.com` 可达。Nature 系 abs 页 `curl -A <浏览器UA>` 可取。**不存在《Nature Robotics》** → 按 `npj Robotics` 理解。
 
 ## 记忆维护
 
