@@ -14,9 +14,9 @@ E-20261027-05	2026-10-27	雷达	DONIC+BiHOI:首个通用人双臂灵巧跟踪器
 E-20261027-06	2026-10-27	雷达	SpatialDex:纯 RGB 人视频预训练 3D 接地双臂灵巧,1M 片+少量真机微调	报出		arXiv:2610.29716
 E-20261027-07	2026-10-27	雷达	FLORA:NVIDIA 开源机器人数据引擎模型套件(论文+模型+代码)	报出		github.com/NVIDIA/Flora
 E-20261027-08	2026-10-27	雷达	Tactile-ETA:冻结智能体+触觉 in-context learning 做精细操作(agent=Codex CLI+gpt-6-astra)	报出		github.com/No-518/Tactile-ETA
-E-20261027-09	2026-10-27	雷达	Agentic WAM(2610.30136):标题级命中争论账本一,未核 abs 不得报出	被拒	待核后重报	arXiv:2610.30136
-E-20261027-10	2026-10-27	雷达	CW-WAM(2610.30117):接触-力感知 WAM 变体,标题级未核	被拒	待核后重报	arXiv:2610.30117
-E-20261027-11	2026-10-27	雷达	UniFlowWAM(2610.30991):4D 几何统一 WAM,标题级未核	被拒	待核后重报	arXiv:2610.30991
+E-20261027-09	2026-10-27	雷达	Agentic WAM(2610.30136):标题级命中争论账本一,未核 abs 不得报出	被拒		arXiv:2610.30136
+E-20261027-10	2026-10-27	雷达	CW-WAM(2610.30117):接触-力感知 WAM 变体,标题级未核	被拒		arXiv:2610.30117
+E-20261027-11	2026-10-27	雷达	UniFlowWAM(2610.30991):4D 几何统一 WAM,标题级未核	被拒		arXiv:2610.30991
 E-20261027-12	2026-10-27	雷达	Backtrack(2610.32941):冻结 VLA 轻量恢复,与免训练检索载体交叉弱	被拒		arXiv:2610.32941
 E-20261027-13	2026-10-27	雷达	AdaDexTrack(CVPR 2026):灵巧跟踪动态调制,仅标题级	被拒		github.com/Janebek/AdaDexTrack
-E-20261027-14	2026-10-27	雷达	From VLM Planners to Robotic Agents(2610.29560):自进化 harness 族,标题级未核	被拒	待核后重报	arXiv:2610.29560
+E-20261027-14	2026-10-27	雷达	From VLM Planners to Robotic Agents(2610.29560):自进化 harness 族,标题级未核	被拒		arXiv:2610.29560
