@@ -1,0 +1,216 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 0 }}>
+    <Box style={{ width: 1280, height: 720, flexDirection: 'column' }}>
+        <Box style={{ width: 1280, height: 10, background: '#0E3F8C' }} />
+
+        <Box style={{ width: 1280, height: 512, flexDirection: 'row', padding: '26px 96px 0 96px' }}>
+            <Box style={{ width: 300, height: 486, background: '#F7F9FC', padding: '24px 22px', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <Box style={{ flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.35 }}>
+                        谁调过
+                        <br />
+                        哪一根轴
+                    </Text>
+                    <Box style={{ width: 44, height: 3, background: '#1E4FA8', marginTop: 14 }} />
+                    <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.65, marginTop: 16 }}>
+                        八项代表工作摊开看。前四列是自变量，最后一列是它要不要为每个新任务付训练成本。
+                    </Text>
+                </Box>
+
+                <Box style={{ background: '#FFFFFF', borderLeft: '3px solid #FFC107', padding: '12px 14px' }}>
+                    <Text style={{ fontSize: 14, color: '#4A5568', lineHeight: 1.7 }}>
+                        读法提示：RoboTTT 那一格的 128 – 8000 是训练时的序列长度，不是检索条数，别和上面几行混着读。
+                    </Text>
+                </Box>
+
+                <Box style={{ flexDirection: 'column', gap: 8 }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Text style={{ width: 26, fontSize: 18, fontWeight: 'bold', color: '#1E4FA8' }}>●</Text>
+                        <Text style={{ fontSize: 15, color: '#4A5568' }}>系统扫过这根轴</Text>
+                    </Box>
+                    <Box style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Text style={{ width: 26, fontSize: 18, color: '#8B97A8' }}>—</Text>
+                        <Text style={{ fontSize: 15, color: '#4A5568' }}>固定不动或没有这根轴</Text>
+                    </Box>
+                </Box>
+            </Box>
+
+            <Box style={{ flex: 1, paddingLeft: 28, height: 486, flexDirection: 'column' }}>
+                <Box style={{ width: 760, height: 46, flexDirection: 'row', background: '#0E3F8C' }}>
+                    <Box style={{ width: 244, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>代表工作</Text>
+                    </Box>
+                    <Box style={{ width: 146, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>库多大</Text>
+                    </Box>
+                    <Box style={{ width: 126, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>取几条</Text>
+                    </Box>
+                    <Box style={{ width: 136, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>每条多长</Text>
+                    </Box>
+                    <Box style={{ width: 108, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>免训练</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ width: 760, height: 55, flexDirection: 'row', borderBottom: '1px solid #E5E7EB' }}>
+                    <Box style={{ width: 244, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>VINN · 2021</Text>
+                    </Box>
+                    <Box style={{ width: 146, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>● 930/750/71</Text>
+                    </Box>
+                    <Box style={{ width: 126, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>● 约 10</Text>
+                    </Box>
+                    <Box style={{ width: 136, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#8B97A8' }}>—</Text>
+                    </Box>
+                    <Box style={{ width: 108, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8' }}>是</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ width: 760, height: 55, flexDirection: 'row', background: '#F7F9FC', borderBottom: '1px solid #E5E7EB' }}>
+                    <Box style={{ width: 244, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>Behavior Retrieval · 2023</Text>
+                    </Box>
+                    <Box style={{ width: 146, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#8B97A8' }}>—</Text>
+                    </Box>
+                    <Box style={{ width: 126, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#8B97A8' }}>—</Text>
+                    </Box>
+                    <Box style={{ width: 136, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#8B97A8' }}>—</Text>
+                    </Box>
+                    <Box style={{ width: 108, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#4A5568' }}>否</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ width: 760, height: 55, flexDirection: 'row', borderBottom: '1px solid #E5E7EB' }}>
+                    <Box style={{ width: 244, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>STRAP · 2024</Text>
+                    </Box>
+                    <Box style={{ width: 146, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>● 76k 条轨迹</Text>
+                    </Box>
+                    <Box style={{ width: 126, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>● 100–4000</Text>
+                    </Box>
+                    <Box style={{ width: 136, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#8B97A8' }}>—</Text>
+                    </Box>
+                    <Box style={{ width: 108, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#4A5568' }}>否</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ width: 760, height: 55, flexDirection: 'row', background: '#F7F9FC', borderBottom: '1px solid #E5E7EB' }}>
+                    <Box style={{ width: 244, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>ReMoBot · 2024</Text>
+                    </Box>
+                    <Box style={{ width: 146, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>● 1–20</Text>
+                    </Box>
+                    <Box style={{ width: 126, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>● 5 / 10</Text>
+                    </Box>
+                    <Box style={{ width: 136, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>● 3 / 5</Text>
+                    </Box>
+                    <Box style={{ width: 108, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8' }}>是</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ width: 760, height: 55, flexDirection: 'row', borderBottom: '1px solid #E5E7EB' }}>
+                    <Box style={{ width: 244, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>MT3 · 2025</Text>
+                    </Box>
+                    <Box style={{ width: 146, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>● 1–50</Text>
+                    </Box>
+                    <Box style={{ width: 126, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>— 恒 1 条</Text>
+                    </Box>
+                    <Box style={{ width: 136, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>— 单条完整</Text>
+                    </Box>
+                    <Box style={{ width: 108, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8' }}>是</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ width: 760, height: 55, flexDirection: 'row', background: '#F7F9FC', borderBottom: '1px solid #E5E7EB' }}>
+                    <Box style={{ width: 244, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>SAIL · 2026</Text>
+                    </Box>
+                    <Box style={{ width: 146, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#8B97A8' }}>—</Text>
+                    </Box>
+                    <Box style={{ width: 126, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>● 1 / 3</Text>
+                    </Box>
+                    <Box style={{ width: 136, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#8B97A8' }}>—</Text>
+                    </Box>
+                    <Box style={{ width: 108, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8' }}>是</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ width: 760, height: 55, flexDirection: 'row', borderBottom: '1px solid #E5E7EB' }}>
+                    <Box style={{ width: 244, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>ReCAP · 2026</Text>
+                    </Box>
+                    <Box style={{ width: 146, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>● 11–35</Text>
+                    </Box>
+                    <Box style={{ width: 126, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>● 取前 5</Text>
+                    </Box>
+                    <Box style={{ width: 136, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>— 固定 16 帧</Text>
+                    </Box>
+                    <Box style={{ width: 108, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1E4FA8' }}>是</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ width: 760, height: 55, flexDirection: 'row', background: '#F7F9FC' }}>
+                    <Box style={{ width: 244, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>RoboTTT · 2026</Text>
+                    </Box>
+                    <Box style={{ width: 146, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#8B97A8' }}>—</Text>
+                    </Box>
+                    <Box style={{ width: 126, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#8B97A8' }}>—</Text>
+                    </Box>
+                    <Box style={{ width: 136, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230' }}>● 128–8000</Text>
+                    </Box>
+                    <Box style={{ width: 108, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#4A5568' }}>否</Text>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 118, padding: '10px 96px 0 96px', flexDirection: 'column', justifyContent: 'center' }}>
+            <Box style={{ background: '#F0F5FC', borderLeft: '4px solid #1E4FA8', padding: '12px 20px' }}>
+                <Text style={{ fontSize: 17, color: '#0E3F8C', lineHeight: 1.6 }}>
+                    只有一项同时碰过前三列，而且只是四个格子的粗扫（取 5 条或 10 条 × 每条 3 段或 5 段）。
+                    没有任何一项在"总预算固定"的前提下画过等值线——这就是空位。
+                </Text>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 80, padding: '0 96px 18px 96px', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+            <Text style={{ fontSize: 14, color: '#8B97A8' }}>演示即上下文 · 组会分享</Text>
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E4FA8' }}>08 / 15</Text>
+        </Box>
+    </Box>
+</Slide>

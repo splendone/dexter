@@ -1,0 +1,70 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 0 }}>
+    <Box style={{ width: 1280, height: 720, flexDirection: 'column' }}>
+        <Box style={{ width: 1280, height: 10, background: '#0E3F8C' }} />
+
+        <Box style={{ width: 1280, height: 710, flexDirection: 'row' }}>
+            <Box style={{ width: 360, height: 710, background: '#0E3F8C', padding: '54px 40px', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <Box style={{ flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 54, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.2 }}>目录</Text>
+                    <Text style={{ fontSize: 15, color: '#9DB6DC', letterSpacing: 4, marginTop: 8 }}>CONTENTS</Text>
+                    <Box style={{ width: 56, height: 3, background: '#FFC107', marginTop: 26 }} />
+                </Box>
+                <Box style={{ flexDirection: 'column' }}>
+                    <Box style={{ width: 280, height: 1, background: '#2A5AA8', marginBottom: 20 }} />
+                    <Text style={{ fontSize: 15, color: '#9DB6DC', lineHeight: 1.85 }}>
+                        四个部分，从"这条路在问什么"讲到"我们准备补什么测量"。
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box style={{ flex: 1, flexDirection: 'column' }}>
+                <Box style={{ flex: 1, padding: '42px 72px 44px 56px', flexDirection: 'column', justifyContent: 'space-between' }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'flex-start', borderBottom: '1px solid #E5E7EB', paddingBottom: 18 }}>
+                        <Text style={{ width: 76, fontSize: 34, fontWeight: 'bold', color: '#1E4FA8' }}>01</Text>
+                        <Box style={{ flex: 1, flexDirection: 'column' }}>
+                            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#1A2230' }}>这个方向在问什么</Text>
+                            <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.6, marginTop: 6 }}>
+                                一条演示进来，机器人靠什么直接上手：找、对、放三步。
+                            </Text>
+                        </Box>
+                    </Box>
+
+                    <Box style={{ flexDirection: 'row', alignItems: 'flex-start', borderBottom: '1px solid #E5E7EB', paddingBottom: 18 }}>
+                        <Text style={{ width: 76, fontSize: 34, fontWeight: 'bold', color: '#1E4FA8' }}>02</Text>
+                        <Box style={{ flex: 1, flexDirection: 'column' }}>
+                            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#1A2230' }}>前人走到哪一步</Text>
+                            <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.6, marginTop: 6 }}>
+                                三代做法的分界线，以及"上下文"这个词被用来指的三件不同的事。
+                            </Text>
+                        </Box>
+                    </Box>
+
+                    <Box style={{ flexDirection: 'row', alignItems: 'flex-start', borderBottom: '1px solid #E5E7EB', paddingBottom: 18 }}>
+                        <Text style={{ width: 76, fontSize: 34, fontWeight: 'bold', color: '#1E4FA8' }}>03</Text>
+                        <Box style={{ flex: 1, flexDirection: 'column' }}>
+                            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#1A2230' }}>三个没料到的发现</Text>
+                            <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.6, marginTop: 6 }}>
+                                更多上下文反而更差、默认评测分辨不出五个点、三种错误会互相伪装。
+                            </Text>
+                        </Box>
+                    </Box>
+
+                    <Box style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
+                        <Text style={{ width: 76, fontSize: 34, fontWeight: 'bold', color: '#1E4FA8' }}>04</Text>
+                        <Box style={{ flex: 1, flexDirection: 'column' }}>
+                            <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#1A2230' }}>接下来要做什么</Text>
+                            <Text style={{ fontSize: 17, color: '#4A5568', lineHeight: 1.6, marginTop: 6 }}>
+                                三件能被别人复算的测量，以及需要团队配合的地方。
+                            </Text>
+                        </Box>
+                    </Box>
+                </Box>
+
+                <Box style={{ height: 62, padding: '0 72px 18px 56px', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+                    <Text style={{ fontSize: 14, color: '#8B97A8' }}>演示即上下文 · 组会分享</Text>
+                    <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E4FA8' }}>02 / 15</Text>
+                </Box>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

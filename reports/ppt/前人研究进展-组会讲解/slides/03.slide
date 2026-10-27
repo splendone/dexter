@@ -1,0 +1,52 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 0 }}>
+    <Box style={{ width: 1280, height: 720, flexDirection: 'column' }}>
+        <Box style={{ width: 1280, height: 10, background: '#0E3F8C' }} />
+
+        <Box style={{ width: 1280, height: 710, flexDirection: 'row' }}>
+            <Box style={{ width: 470, height: 710, background: '#0E3F8C', padding: '96px 48px', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <Box>
+                    <Text style={{ fontSize: 16, color: '#9DB6DC', letterSpacing: 3 }}>第一部分</Text>
+                    <Text style={{ fontSize: 190, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.0, marginTop: 18 }}>01</Text>
+                    <Box style={{ width: 64, height: 4, background: '#FFC107', marginTop: 26 }} />
+                </Box>
+                <Box style={{ flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 15, color: '#9DB6DC', lineHeight: 1.8 }}>
+                    先把问题说清楚，再谈文献。
+                    </Text>
+                    <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFC107', marginTop: 12, letterSpacing: 1 }}>03 / 15</Text>
+                </Box>
+            </Box>
+
+            <Box style={{ flex: 1, padding: '112px 96px 0 72px', flexDirection: 'column' }}>
+                <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.3 }}>
+                    这个方向在问什么
+                </Text>
+                <Text style={{ fontSize: 19, color: '#4A5568', lineHeight: 1.7, marginTop: 16 }}>
+                    一句话：能不能让机器人"看一条人做事的录像"就上手，
+                    而且不为此重新训练一个模型。
+                </Text>
+
+                <Box style={{ flexDirection: 'column', gap: 18, marginTop: 34 }}>
+                    <Box style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
+                        <Box style={{ width: 8, height: 8, background: '#1E4FA8', marginTop: 12, marginRight: 16 }} />
+                        <Text style={{ flex: 1, fontSize: 20, color: '#1A2230', lineHeight: 1.65 }}>
+                            要解决的不是"更准"，而是"新任务不用训"——这是它和主流端到端训练最根本的差别。
+                        </Text>
+                    </Box>
+                    <Box style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
+                        <Box style={{ width: 8, height: 8, background: '#1E4FA8', marginTop: 12, marginRight: 16 }} />
+                        <Text style={{ flex: 1, fontSize: 20, color: '#1A2230', lineHeight: 1.65 }}>
+                            这条路的价值还在于"失败能定位"：找错了、对不齐、还是执行不了，可以分开查。
+                        </Text>
+                    </Box>
+                    <Box style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
+                        <Box style={{ width: 8, height: 8, background: '#1E4FA8', marginTop: 12, marginRight: 16 }} />
+                        <Text style={{ flex: 1, fontSize: 20, color: '#1A2230', lineHeight: 1.65 }}>
+                            代价也很清楚：单臂、开环、演示和部署时物体的摆放不能差太多。
+                        </Text>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

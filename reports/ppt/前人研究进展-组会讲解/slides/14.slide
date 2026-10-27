@@ -1,0 +1,83 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 0 }}>
+    <Box style={{ width: 1280, height: 720, flexDirection: 'column' }}>
+        <Box style={{ width: 1280, height: 10, background: '#0E3F8C' }} />
+
+        <Box style={{ width: 1280, height: 548, flexDirection: 'row', padding: '26px 96px 0 96px' }}>
+            <Box style={{ width: 286, height: 522, background: '#F7F9FC', borderTop: '4px solid #0E3F8C', padding: '24px 22px', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <Box style={{ flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.35, fontFamily: 'Heiti SC' }}>
+                        我们要补的
+                        <br />
+                        三件测量
+                    </Text>
+                    <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.7, marginTop: 14 }}>
+                        每一件都能落成一张图或一张表，别人拿着我们的数据和代码可以重算。
+                    </Text>
+                </Box>
+                <Box style={{ flexDirection: 'column' }}>
+                    <Box style={{ width: 44, height: 1, background: '#D6DCE5' }} />
+                    <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.75, marginTop: 14 }}>
+                        前两件管"给多少上下文"，第三件管"断在哪一环"。前者决定画什么图，后者决定这张图能不能解释。
+                    </Text>
+                </Box>
+                <Box style={{ flexDirection: 'column', gap: 10 }}>
+                    <Text style={{ fontSize: 15, color: '#8B97A8', lineHeight: 1.6 }}>
+                        共同前提：仿真里做，不需要新硬件。
+                    </Text>
+                    <Text style={{ fontSize: 15, color: '#1E4FA8', fontWeight: 'bold', lineHeight: 1.6 }}>
+                        一台显卡一夜到一天一轮。
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box style={{ flex: 1, paddingLeft: 30, flexDirection: 'column', justifyContent: 'space-between' }}>
+                <Box style={{ flexDirection: 'row', alignItems: 'flex-start', borderBottom: '1px solid #E5E7EB', paddingBottom: 14 }}>
+                    <Text style={{ width: 46, fontSize: 26, fontWeight: 'bold', color: '#1E4FA8' }}>一</Text>
+                    <Box style={{ flex: 1, flexDirection: 'column' }}>
+                        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1A2230' }}>预算等值线：在总预算固定下换组合</Text>
+                        <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.65, marginTop: 5 }}>
+                            同样是 32 段上下文，可以是"取 4 条 × 每条 8 段"，也可以是"取 1 条 × 每条 32 段"。
+                            不固定总预算，"多给几条"和"每条更长"就混在一起，分不清是谁的功劳。
+                        </Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ flexDirection: 'row', alignItems: 'flex-start', borderBottom: '1px solid #E5E7EB', paddingBottom: 14 }}>
+                    <Text style={{ width: 46, fontSize: 26, fontWeight: 'bold', color: '#1E4FA8' }}>二</Text>
+                    <Box style={{ flex: 1, flexDirection: 'column' }}>
+                        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1A2230' }}>换算率：一条演示顶多少条训练示范</Text>
+                        <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.65, marginTop: 5 }}>
+                            必须同时报三样：插值规则、相邻测点之间的距离、交叉点的置信区间。
+                            现在唯一公开的数字来自厂商博客，是插值估出来的——换一种插值方式，结果差 14%。
+                        </Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ flexDirection: 'row', alignItems: 'flex-start' }}>
+                    <Text style={{ width: 46, fontSize: 26, fontWeight: 'bold', color: '#1E4FA8' }}>三</Text>
+                    <Box style={{ flex: 1, flexDirection: 'column' }}>
+                        <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1A2230' }}>阶段级归因：把"哪一步断了"变成区间估计</Text>
+                        <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.65, marginTop: 5 }}>
+                            在评测的统计模型里加一个"阶段"项，输出"某方法在某阶段显著更差"以及它的置信区间；
+                            再用真值掩码、真值位姿做反事实校验，防止三种错误互相伪装。
+                        </Text>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 110, padding: '12px 96px 0 96px', flexDirection: 'column', justifyContent: 'center' }}>
+            <Box style={{ background: '#0E3F8C', padding: '13px 20px', flexDirection: 'row', alignItems: 'center' }}>
+                <Text style={{ fontSize: 18, color: '#FFC107', fontWeight: 'bold' }}>三条底线</Text>
+                <Text style={{ fontSize: 18, color: '#FFFFFF', marginLeft: 16 }}>
+                    等算力、等数据、检索度量固定——少一条，画出来的曲线就不可解释。
+                </Text>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 52, padding: '0 96px 18px 96px', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+            <Text style={{ fontSize: 14, color: '#8B97A8' }}>演示即上下文 · 组会分享</Text>
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E4FA8' }}>14 / 15</Text>
+        </Box>
+    </Box>
+</Slide>

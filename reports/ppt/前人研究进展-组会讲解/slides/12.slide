@@ -1,0 +1,116 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 0 }}>
+    <Box style={{ width: 1280, height: 720, flexDirection: 'column' }}>
+        <Box style={{ width: 1280, height: 10, background: '#0E3F8C' }} />
+
+        <Box style={{ width: 1280, padding: '22px 96px 0 96px', flexDirection: 'column' }}>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C' }}>发现三：三种错误，会互相伪装</Text>
+            <Text style={{ fontSize: 17, color: '#8B97A8', marginTop: 4 }}>
+                只看最后成没成，分不清是哪一环断的
+            </Text>
+        </Box>
+
+        <Box style={{ width: 1280, height: 424, flexDirection: 'row', padding: '14px 96px 0 96px' }}>
+            <Box style={{ width: 336, height: 410, flexDirection: 'column', justifyContent: 'space-between' }}>
+                <Box style={{ flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#1A2230', lineHeight: 1.5 }}>
+                        一个分割错误，会被记成位姿错误
+                    </Text>
+                    <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.7, marginTop: 8 }}>
+                        掩码混进了桌面，深度中位数就偏了；位姿模块拿到偏掉的初值，
+                        还会"自信地"收敛到一个错误答案——它看不到掩码是错的。
+                    </Text>
+                </Box>
+
+                <Box style={{ background: '#F0F5FC', borderLeft: '4px solid #1E4FA8', padding: '12px 14px' }}>
+                    <Text style={{ fontSize: 15, color: '#0E3F8C', lineHeight: 1.6 }}>
+                        所以论文里"检索失败占 22.3%"这类数字，如果是端到端打一个标签归出来的，就不能直接信。
+                    </Text>
+                </Box>
+
+                <Box style={{ background: '#FFFFFF', border: '1px dashed #8B97A8', padding: '12px 14px' }}>
+                    <Text style={{ fontSize: 15, color: '#1A2230', lineHeight: 1.6 }}>
+                        <span style={{ fontWeight: 'bold' }}>唯一可靠的办法：</span>
+                        拿真值掩码、真值位姿重跑一小批（比如 10% 的回合），看成功率怎么变。
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box style={{ flex: 1, paddingLeft: 28, height: 410, flexDirection: 'column' }}>
+                <Box style={{ width: 724, height: 52, flexDirection: 'row', background: '#0E3F8C' }}>
+                    <Box style={{ width: 150, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>真实原因</Text>
+                    </Box>
+                    <Box style={{ width: 110, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>被当成</Text>
+                    </Box>
+                    <Box style={{ width: 464, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#FFFFFF' }}>为什么分不开</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ width: 724, height: 89, flexDirection: 'row', borderBottom: '1px solid #E5E7EB' }}>
+                    <Box style={{ width: 150, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>分割错</Text>
+                    </Box>
+                    <Box style={{ width: 110, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#D9534F' }}>位姿错</Text>
+                    </Box>
+                    <Box style={{ width: 464, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230', lineHeight: 1.5 }}>掩码混入桌面 → 深度初值偏移 → 位姿自信地收敛到错处</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ width: 724, height: 89, flexDirection: 'row', background: '#F7F9FC', borderBottom: '1px solid #E5E7EB' }}>
+                    <Box style={{ width: 150, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>对称物体翻转</Text>
+                    </Box>
+                    <Box style={{ width: 110, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#D9534F' }}>分割错</Text>
+                    </Box>
+                    <Box style={{ width: 464, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230', lineHeight: 1.5 }}>误差很大，但掩码其实是对的</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ width: 724, height: 89, flexDirection: 'row', borderBottom: '1px solid #E5E7EB' }}>
+                    <Box style={{ width: 150, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>检索到相似物</Text>
+                    </Box>
+                    <Box style={{ width: 110, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#D9534F' }}>位姿错</Text>
+                    </Box>
+                    <Box style={{ width: 464, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230', lineHeight: 1.5 }}>对错误的物体估得很准，位姿分数反而更高</Text>
+                    </Box>
+                </Box>
+
+                <Box style={{ width: 724, height: 89, flexDirection: 'row', background: '#F7F9FC' }}>
+                    <Box style={{ width: 150, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>跟踪漂移</Text>
+                    </Box>
+                    <Box style={{ width: 110, alignItems: 'center', justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#D9534F' }}>检索错</Text>
+                    </Box>
+                    <Box style={{ width: 464, paddingLeft: 16, justifyContent: 'center' }}>
+                        <Text style={{ fontSize: 15, color: '#1A2230', lineHeight: 1.5 }}>首帧其实是对的，错在后面的传播</Text>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 135, padding: '12px 96px 0 96px', flexDirection: 'column', justifyContent: 'center' }}>
+            <Box style={{ background: '#F7F9FC', padding: '16px 20px' }}>
+                <Text style={{ fontSize: 17, color: '#1A2230', lineHeight: 1.65 }}>
+                    <span style={{ fontWeight: 'bold', color: '#0E3F8C' }}>要记的东西：</span>
+                    每一帧的掩码面积与点数、位姿前两名假设的分数差、帧间旋转跳变、抓取位姿与成败。
+                    这些量不记，事后只能靠猜。
+                </Text>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 60, padding: '0 96px 18px 96px', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+            <Text style={{ fontSize: 14, color: '#8B97A8' }}>演示即上下文 · 组会分享</Text>
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E4FA8' }}>12 / 15</Text>
+        </Box>
+    </Box>
+</Slide>

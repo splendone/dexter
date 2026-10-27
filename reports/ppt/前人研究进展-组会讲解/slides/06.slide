@@ -1,0 +1,88 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 0 }}>
+    <Box style={{ width: 1280, height: 720, flexDirection: 'column' }}>
+        <Box style={{ width: 1280, height: 10, background: '#0E3F8C' }} />
+
+        <Box style={{ width: 1280, padding: '28px 96px 0 96px', flexDirection: 'column' }}>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C' }}>三代人做的事，分界线在"检索完怎么用"</Text>
+            <Text style={{ fontSize: 17, color: '#8B97A8', marginTop: 4 }}>
+                同样是检索，第一代直接出动作，第二代要重训，第三代才真正做到不训练
+            </Text>
+        </Box>
+
+        <Box style={{ width: 1280, height: 462, padding: '16px 96px 0 96px', flexDirection: 'column', gap: 12 }}>
+            <Box style={{ height: 138, background: '#F7F9FC', borderLeft: '4px solid #8B97A8', flexDirection: 'row', padding: '16px 22px 16px 20px' }}>
+                <Box style={{ width: 206, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#4A5568' }}>2021</Text>
+                    <Text style={{ fontSize: 14, color: '#8B97A8', marginTop: 4 }}>第一代</Text>
+                </Box>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1A2230' }}>检索一个动作，直接输出</Text>
+                    <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.6, marginTop: 6 }}>
+                        从库里找最像的几帧，把它们对应的动作加权平均，就是下一步要执行的指令。
+                        代表工作是 VINN。
+                    </Text>
+                </Box>
+                <Box style={{ width: 250, background: '#FFFFFF', border: '1px solid #D6DCE5', padding: '10px 12px' }}>
+                    <Text style={{ fontSize: 14, color: '#4A5568', lineHeight: 1.55 }}>
+                        <span style={{ color: '#D9534F', fontWeight: 'bold' }}>代价：</span>
+                        免训练，但只有单步、没有时序结构；在精细任务上终局成功率接近 0。
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box style={{ height: 138, background: '#F7F9FC', borderLeft: '4px solid #3D7BD9', flexDirection: 'row', padding: '16px 22px 16px 20px' }}>
+                <Box style={{ width: 206, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#3D7BD9' }}>2023–2025</Text>
+                    <Text style={{ fontSize: 14, color: '#8B97A8', marginTop: 4 }}>第二代</Text>
+                </Box>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1A2230' }}>检索到的数据，要一起训练</Text>
+                    <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.6, marginTop: 6 }}>
+                        把检索出来的片段和目标任务的少量数据混在一起重新训练策略。
+                        代表工作是 Behavior Retrieval、STRAP、IWR。
+                    </Text>
+                </Box>
+                <Box style={{ width: 250, background: '#FFFFFF', border: '1px solid #D6DCE5', padding: '10px 12px' }}>
+                    <Text style={{ fontSize: 14, color: '#4A5568', lineHeight: 1.55 }}>
+                        <span style={{ color: '#D9534F', fontWeight: 'bold' }}>代价：</span>
+                        每个新任务仍要付一次训练；有工作部署时要重训约 35 分钟。
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box style={{ height: 138, background: '#E8EFF8', borderLeft: '4px solid #1E4FA8', flexDirection: 'row', padding: '16px 22px 16px 20px' }}>
+                <Box style={{ width: 206, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 23, fontWeight: 'bold', color: '#1E4FA8' }}>2025–2026</Text>
+                    <Text style={{ fontSize: 14, color: '#0E3F8C', marginTop: 4 }}>第三代</Text>
+                </Box>
+                <Box style={{ flex: 1, flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#0E3F8C' }}>检索结果当上下文，喂给冻结的策略</Text>
+                    <Text style={{ fontSize: 16, color: '#1A2230', lineHeight: 1.6, marginTop: 6 }}>
+                        检索到的演示不参与训练，直接作为提示交给一个不动的策略，动作由它现场生成。
+                        代表工作是 MT3、ReCAP。
+                    </Text>
+                </Box>
+                <Box style={{ width: 250, background: '#FFFFFF', border: '1px solid #1E4FA8', padding: '10px 12px' }}>
+                    <Text style={{ fontSize: 14, color: '#1A2230', lineHeight: 1.55 }}>
+                        <span style={{ color: '#1E4FA8', fontWeight: 'bold' }}>代价：</span>
+                        真正零训练；但只能吃定长片段，或一条完整演示。
+                    </Text>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 84, padding: '0 96px', flexDirection: 'column', justifyContent: 'center' }}>
+            <Box style={{ background: '#0E3F8C', padding: '12px 20px', flexDirection: 'row', alignItems: 'center' }}>
+                <Text style={{ fontSize: 18, color: '#FFFFFF', fontWeight: 'bold' }}>所以</Text>
+                <Text style={{ fontSize: 18, color: '#FFFFFF', marginLeft: 16 }}>
+                    判断一项工作属于哪一代，不要看它检索什么，要看它检索完还训不训练。
+                </Text>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 66, padding: '0 96px 18px 96px', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+            <Text style={{ fontSize: 14, color: '#8B97A8' }}>演示即上下文 · 组会分享</Text>
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E4FA8' }}>06 / 15</Text>
+        </Box>
+    </Box>
+</Slide>

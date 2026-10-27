@@ -1,0 +1,92 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 0 }}>
+    <Box style={{ width: 1280, height: 720, flexDirection: 'column' }}>
+        <Box style={{ width: 1280, height: 10, background: '#0E3F8C' }} />
+
+        <Box style={{ width: 1280, padding: '24px 96px 0 96px', flexDirection: 'column' }}>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C' }}>"上下文"这个词，被用来指三件不同的事</Text>
+            <Text style={{ fontSize: 17, color: '#8B97A8', marginTop: 4 }}>
+                三句话在各自的量纲上都对，放在一起就没法比
+            </Text>
+            <Box style={{ width: 1088, height: 1, background: '#D6DCE5', marginTop: 14 }} />
+        </Box>
+
+        <Box style={{ width: 1280, height: 410, padding: '14px 96px 0 96px', flexDirection: 'row', gap: 24 }}>
+            <Box style={{ width: 346, background: '#F7F9FC', border: '1px solid #D6DCE5', padding: '20px 22px', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <Box style={{ flexDirection: 'column' }}>
+                    <Box style={{ alignSelf: 'flex-start', background: '#E8EFF8', padding: '4px 10px', borderRadius: 12 }}>
+                        <Text style={{ fontSize: 13, color: '#0E3F8C' }}>单位：时间步</Text>
+                    </Box>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', marginTop: 14, lineHeight: 1.4 }}>
+                        训练时，一条序列看多长
+                    </Text>
+                    <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.65, marginTop: 10 }}>
+                        指预训练时把多长的历史压进一条训练样本。有工作把这个长度拉到 8000 步，
+                        30 赫兹下相当于四分半钟的连续操作。
+                    </Text>
+                </Box>
+                <Box>
+                    <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#1E4FA8', lineHeight: 1.1 }}>8000 步</Text>
+                    <Text style={{ fontSize: 14, color: '#8B97A8', marginTop: 6, lineHeight: 1.5 }}>
+                        但下游微调只用到 1000 步——训练给的能力和部署用的长度是两回事。
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box style={{ width: 346, background: '#F7F9FC', border: '1px solid #D6DCE5', padding: '20px 22px', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <Box style={{ flexDirection: 'column' }}>
+                    <Box style={{ alignSelf: 'flex-start', background: '#E8EFF8', padding: '4px 10px', borderRadius: 12 }}>
+                        <Text style={{ fontSize: 13, color: '#0E3F8C' }}>单位：条</Text>
+                    </Box>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', marginTop: 14, lineHeight: 1.4 }}>
+                        提示里，放几条演示
+                    </Text>
+                    <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.65, marginTop: 10 }}>
+                        指推理时直接摆在模型面前、让它照着的演示数量。主流做法固定为一条，
+                        厂商对外展示时也只放一段第一视角视频。
+                    </Text>
+                </Box>
+                <Box>
+                    <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#1E4FA8', lineHeight: 1.1 }}>通常 1 条</Text>
+                    <Text style={{ fontSize: 14, color: '#8B97A8', marginTop: 6, lineHeight: 1.5 }}>
+                        几乎没有人试过把这一条换成三条、五条，看会发生什么。
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box style={{ width: 346, background: '#F7F9FC', border: '1px solid #D6DCE5', padding: '20px 22px', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <Box style={{ flexDirection: 'column' }}>
+                    <Box style={{ alignSelf: 'flex-start', background: '#E8EFF8', padding: '4px 10px', borderRadius: 12 }}>
+                        <Text style={{ fontSize: 13, color: '#0E3F8C' }}>单位：条 / 任务</Text>
+                    </Box>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#1A2230', marginTop: 14, lineHeight: 1.4 }}>
+                        从多大的库里，取几条
+                    </Text>
+                    <Text style={{ fontSize: 16, color: '#4A5568', lineHeight: 1.65, marginTop: 10 }}>
+                        指演示库的规模，以及每次实际取回多少条。有工作把取回条数从 100 扫到 4000，
+                        发现最优点随任务而变。
+                    </Text>
+                </Box>
+                <Box>
+                    <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#1E4FA8', lineHeight: 1.1 }}>100 → 4000</Text>
+                    <Text style={{ fontSize: 14, color: '#8B97A8', marginTop: 6, lineHeight: 1.5 }}>
+                        这是唯一被系统扫过的一根轴，但库的大小和取几条是分开动的。
+                    </Text>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 116, padding: '16px 96px 0 96px', flexDirection: 'column', justifyContent: 'center' }}>
+            <Box style={{ background: '#F0F5FC', borderLeft: '4px solid #1E4FA8', padding: '12px 20px' }}>
+                <Text style={{ fontSize: 18, color: '#0E3F8C', lineHeight: 1.6 }}>
+                    所以"这个方向还没人做全"这句话，必须先说清是哪一根轴。
+                    把三根轴混着说，谁都可以说"我做了上下文"，也谁都无法被反驳。
+                </Text>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 60, padding: '0 96px 18px 96px', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+            <Text style={{ fontSize: 14, color: '#8B97A8' }}>演示即上下文 · 组会分享</Text>
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E4FA8' }}>07 / 15</Text>
+        </Box>
+    </Box>
+</Slide>

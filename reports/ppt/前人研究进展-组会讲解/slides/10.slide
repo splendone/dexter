@@ -1,0 +1,83 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 0 }}>
+    <Box style={{ width: 1280, height: 720, flexDirection: 'column' }}>
+        <Box style={{ width: 1280, height: 10, background: '#0E3F8C' }} />
+
+        <Box style={{ width: 1280, padding: '24px 96px 0 96px', flexDirection: 'column' }}>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C' }}>发现一：演示给得越多，反而更差</Text>
+            <Text style={{ fontSize: 17, color: '#8B97A8', marginTop: 4 }}>
+                三处互相独立的工作里都出现了下降，说明这不是噪声，是有最优区间
+            </Text>
+        </Box>
+
+        <Box style={{ width: 1280, height: 436, flexDirection: 'row', padding: '14px 96px 0 96px' }}>
+            <Box style={{ width: 330, height: 422, background: '#0E3F8C', padding: '24px 24px', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <Box style={{ flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 15, color: '#9DB6DC', letterSpacing: 2 }}>第一处证据</Text>
+                    <Text style={{ fontSize: 22, fontWeight: 'bold', color: '#FFFFFF', lineHeight: 1.45, marginTop: 12 }}>
+                        演示 1 条 → 2 条 → 4 条
+                    </Text>
+                    <Text style={{ fontSize: 16, color: '#C9D8EC', lineHeight: 1.7, marginTop: 12 }}>
+                        成功率 22.5 → 24.0 → <span style={{ color: '#FFC107', fontWeight: 'bold' }}>19.0</span>。
+                        其中"提起瓶子"这一项从 31 涨到 36，再掉到 <span style={{ color: '#FFC107', fontWeight: 'bold' }}>2</span>。
+                    </Text>
+                </Box>
+                <Box>
+                    <Text style={{ fontSize: 14, color: '#9DB6DC', lineHeight: 1.6 }}>
+                        数据来自一项触觉演示工作，附录里的消融实验。
+                    </Text>
+                </Box>
+            </Box>
+
+            <Box style={{ flex: 1, paddingLeft: 26, flexDirection: 'column' }}>
+                <Chart
+                    style={{ width: '100%', height: 268 }}
+                    chartType='barChart'
+                    title='演示条数与成功率（%）'
+                    titleColor='#0E3F8C'
+                    showLegend={false}
+                    showDataLabels={true}
+                    axisColor='#8B97A8'
+                    dataLabelColor='#1A2230'
+                    colors={['#1E4FA8']}
+                    background='#F7F9FC'
+                    data={[
+                        ['演示条数', '成功率'],
+                        ['1 条', 22.5],
+                        ['2 条', 24.0],
+                        ['4 条', 19.0],
+                    ]}
+                />
+
+                <Box style={{ flexDirection: 'row', gap: 16, marginTop: 14 }}>
+                    <Box style={{ flex: 1, background: '#F7F9FC', borderLeft: '3px solid #D9534F', padding: '12px 16px' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>第二处证据：给 1 帧历史反而更差</Text>
+                        <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.55, marginTop: 4 }}>
+                            同一任务上，给一帧历史 <span style={{ fontWeight: 'bold', color: '#D9534F' }}>39.5%</span>，
+                            完全不给历史 <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>57%</span>。
+                        </Text>
+                    </Box>
+                    <Box style={{ flex: 1, background: '#F7F9FC', borderLeft: '3px solid #D9534F', padding: '12px 16px' }}>
+                        <Text style={{ fontSize: 15, fontWeight: 'bold', color: '#1A2230' }}>第三处证据：最优点随任务移动</Text>
+                        <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.55, marginTop: 4 }}>
+                            取回条数从 100 扫到 4000，最优值在不同任务上不一样，不是"越大越好"。
+                        </Text>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 112, padding: '8px 96px 0 96px', flexDirection: 'column', justifyContent: 'center' }}>
+            <Box style={{ background: '#F0F5FC', borderLeft: '4px solid #1E4FA8', padding: '12px 20px' }}>
+                <Text style={{ fontSize: 18, color: '#0E3F8C', lineHeight: 1.6 }}>
+                    这意味着：报"用了三条演示"这种单点结果没有意义，必须画出整条曲线，
+                    并且说清最优点在哪里、从哪开始变坏。
+                </Text>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 68, padding: '0 96px 18px 96px', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+            <Text style={{ fontSize: 14, color: '#8B97A8' }}>演示即上下文 · 组会分享</Text>
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E4FA8' }}>10 / 15</Text>
+        </Box>
+    </Box>
+</Slide>

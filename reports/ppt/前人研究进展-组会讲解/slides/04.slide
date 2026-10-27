@@ -1,0 +1,91 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 0 }}>
+    <Box style={{ width: 1280, height: 720, flexDirection: 'column' }}>
+        <Box style={{ width: 1280, height: 10, background: '#0E3F8C' }} />
+
+        <Box style={{ width: 1280, padding: '30px 96px 0 96px', flexDirection: 'column' }}>
+            <Text style={{ fontSize: 34, fontWeight: 'bold', color: '#0E3F8C' }}>一条演示进来，机器人靠什么直接上手</Text>
+            <Text style={{ fontSize: 17, color: '#8B97A8', marginTop: 4 }}>
+                整条链路只有四步，而且每一步都能单独出问题
+            </Text>
+        </Box>
+
+        <Box style={{ width: 1280, height: 486, flexDirection: 'row', padding: '18px 96px 0 96px' }}>
+            <Box style={{ width: 748, height: 466 }}>
+                <svg width={748} height={466} viewBox='0 0 748 466'>
+                    <rect x='0' y='0' width='748' height='466' fill='#F7F9FC' rx='6' />
+
+                    <rect x='22' y='16' width='540' height='92' fill='#FFFFFF' stroke='#D6DCE5' rx='4' />
+                    <circle cx='56' cy='62' r='16' fill='#1E4FA8' />
+                    <text x='56' y='68' textAnchor='middle' fontSize='15' fill='#FFFFFF' fontWeight='bold'>1</text>
+                    <text x='86' y='52' fontSize='18' fill='#1A2230' fontWeight='bold'>听懂要做的事</text>
+                    <text x='86' y='80' fontSize='14' fill='#4A5568'>一句话 → 拆成抓、放、擦、拧这类动作名</text>
+                    <rect x='586' y='44' width='140' height='36' fill='#E8EFF8' rx='18' />
+                    <text x='656' y='67' textAnchor='middle' fontSize='14' fill='#0E3F8C'>得到动作名</text>
+
+                    <rect x='22' y='124' width='540' height='92' fill='#FFFFFF' stroke='#D6DCE5' rx='4' />
+                    <circle cx='56' cy='170' r='16' fill='#1E4FA8' />
+                    <text x='56' y='176' textAnchor='middle' fontSize='15' fill='#FFFFFF' fontWeight='bold'>2</text>
+                    <text x='86' y='160' fontSize='18' fill='#1A2230' fontWeight='bold'>在库里找一条最像的演示</text>
+                    <text x='86' y='188' fontSize='14' fill='#4A5568'>当前物体点云 vs 库里每条演示首帧，取最近的一条</text>
+                    <rect x='586' y='152' width='140' height='36' fill='#E8EFF8' rx='18' />
+                    <text x='656' y='175' textAnchor='middle' fontSize='14' fill='#0E3F8C'>得到一条演示</text>
+
+                    <rect x='22' y='232' width='540' height='92' fill='#FFFFFF' stroke='#D6DCE5' rx='4' />
+                    <circle cx='56' cy='278' r='16' fill='#1E4FA8' />
+                    <text x='56' y='284' textAnchor='middle' fontSize='15' fill='#FFFFFF' fontWeight='bold'>3</text>
+                    <text x='86' y='268' fontSize='18' fill='#1A2230' fontWeight='bold'>把演示轨迹对到当前物体上</text>
+                    <text x='86' y='296' fontSize='14' fill='#4A5568'>估物体位姿，整体搬运轨迹，再规划一条不撞的路</text>
+                    <rect x='586' y='260' width='140' height='36' fill='#E8EFF8' rx='18' />
+                    <text x='656' y='283' textAnchor='middle' fontSize='14' fill='#0E3F8C'>得到一条路径</text>
+
+                    <rect x='22' y='340' width='540' height='92' fill='#E8EFF8' stroke='#1E4FA8' rx='4' />
+                    <circle cx='56' cy='386' r='16' fill='#0E3F8C' />
+                    <text x='56' y='392' textAnchor='middle' fontSize='15' fill='#FFFFFF' fontWeight='bold'>4</text>
+                    <text x='86' y='376' fontSize='18' fill='#0E3F8C' fontWeight='bold'>照着重放</text>
+                    <text x='86' y='404' fontSize='14' fill='#4A5568'>按演示的末端轨迹和夹爪开合重放；这一段开环</text>
+                    <rect x='586' y='368' width='140' height='36' fill='#FFFFFF' stroke='#1E4FA8' rx='18' />
+                    <text x='656' y='391' textAnchor='middle' fontSize='14' fill='#0E3F8C'>直接执行</text>
+                </svg>
+            </Box>
+
+            <Box style={{ flex: 1, paddingLeft: 30, flexDirection: 'column', justifyContent: 'space-between' }}>
+                <Box style={{ flexDirection: 'column' }}>
+                    <Text style={{ fontSize: 21, fontWeight: 'bold', color: '#1E4FA8' }}>为什么值得研究</Text>
+                    <Box style={{ width: 44, height: 3, background: '#1E4FA8', marginTop: 8, marginBottom: 14 }} />
+
+                    <Box style={{ flexDirection: 'column', gap: 14 }}>
+                        <Box style={{ flexDirection: 'column' }}>
+                            <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1A2230' }}>新任务不用训</Text>
+                            <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.55, marginTop: 3 }}>
+                                加一条演示就是加一行数据，不更新任何参数。
+                            </Text>
+                        </Box>
+                        <Box style={{ flexDirection: 'column' }}>
+                            <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1A2230' }}>失败能定位</Text>
+                            <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.55, marginTop: 3 }}>
+                                找错了、对不齐、还是执行不了，三个环节能分开查。
+                            </Text>
+                        </Box>
+                        <Box style={{ flexDirection: 'column' }}>
+                            <Text style={{ fontSize: 18, fontWeight: 'bold', color: '#1A2230' }}>库可以一直攒</Text>
+                            <Text style={{ fontSize: 15, color: '#4A5568', lineHeight: 1.55, marginTop: 3 }}>
+                                演示越多，越可能撞上差不多能用的那一条。
+                            </Text>
+                        </Box>
+                    </Box>
+                </Box>
+
+                <Box style={{ background: '#F0F5FC', borderLeft: '3px solid #D9534F', padding: '10px 12px' }}>
+                    <Text style={{ fontSize: 14, color: '#1A2230', lineHeight: 1.55 }}>
+                        <span style={{ color: '#D9534F', fontWeight: 'bold' }}>边界：</span>单臂、开环、演示与部署时物体摆放不能差太多。
+                    </Text>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 118, padding: '0 96px 18px 96px', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+            <Text style={{ fontSize: 14, color: '#8B97A8' }}>演示即上下文 · 组会分享</Text>
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E4FA8' }}>04 / 15</Text>
+        </Box>
+    </Box>
+</Slide>

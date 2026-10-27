@@ -1,0 +1,60 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 0 }}>
+    <Box style={{ width: 1280, height: 720, flexDirection: 'column' }}>
+        <Box style={{ width: 1280, height: 10, background: '#0E3F8C' }} />
+
+        <Box style={{ width: 1280, height: 618, flexDirection: 'row', padding: '30px 96px 0 96px' }}>
+            <Box style={{ width: 470, flexDirection: 'column', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 16, color: '#8B97A8', letterSpacing: 2 }}>发现二 · 我们自己算的</Text>
+                <Text style={{ fontSize: 150, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.0, marginTop: 12 }}>9.4</Text>
+                <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#1E4FA8', marginTop: 8 }}>个百分点</Text>
+                <Box style={{ width: 120, height: 4, background: '#D9534F', marginTop: 16 }} />
+                <Text style={{ fontSize: 19, color: '#1A2230', lineHeight: 1.7, marginTop: 18 }}>
+                    这是通用仿真基准的默认配置能分辨的
+                    <span style={{ fontWeight: 'bold' }}>最小差异</span>——比我们要测的效应还大。
+                </Text>
+            </Box>
+
+            <Box style={{ flex: 1, paddingLeft: 40, flexDirection: 'column', justifyContent: 'center', gap: 18 }}>
+                <Box style={{ background: '#F7F9FC', border: '1px solid #D6DCE5', padding: '16px 20px' }}>
+                    <Text style={{ fontSize: 16, color: '#8B97A8' }}>默认配置是什么</Text>
+                    <Text style={{ fontSize: 19, color: '#1A2230', lineHeight: 1.6, marginTop: 6 }}>
+                        20 个任务 × 每个任务跑 20 次 × 1 个随机种子。这个分辨率下，
+                        5 个百分点的差异只有 <span style={{ fontWeight: 'bold', color: '#D9534F' }}>30%</span> 的把握能测出来。
+                    </Text>
+                </Box>
+
+                <Box style={{ background: '#E8EFF8', border: '1px solid #1E4FA8', padding: '16px 20px' }}>
+                    <Text style={{ fontSize: 16, color: '#0E3F8C' }}>换成我们的配置</Text>
+                    <Text style={{ fontSize: 19, color: '#1A2230', lineHeight: 1.6, marginTop: 6 }}>
+                        20 个任务 × 50 次 × 3 个种子 → 分辨率 <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>3.4 个百分点</span>，
+                        把握 <span style={{ fontWeight: 'bold', color: '#1E4FA8' }}>98%</span>。
+                    </Text>
+                </Box>
+
+                <Box style={{ flexDirection: 'row', gap: 14 }}>
+                    <Box style={{ flex: 1, background: '#FFFFFF', border: '1px solid #D6DCE5', padding: '12px 16px' }}>
+                        <Text style={{ fontSize: 15, color: '#8B97A8' }}>成本</Text>
+                        <Text style={{ fontSize: 17, color: '#1A2230', marginTop: 4, lineHeight: 1.5 }}>
+                            18 个配置约 10.8 万次试验，一台 4090 一夜到一天。
+                        </Text>
+                    </Box>
+                    <Box style={{ flex: 1, background: '#FFFFFF', border: '1px solid #D6DCE5', padding: '12px 16px' }}>
+                        <Text style={{ fontSize: 15, color: '#8B97A8' }}>稳健性</Text>
+                        <Text style={{ fontSize: 17, color: '#1A2230', marginTop: 4, lineHeight: 1.5 }}>
+                            九组不同假设下都落在 3.4 到 3.8 之间，别人可以复算。
+                        </Text>
+                    </Box>
+                </Box>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 92, padding: '0 96px', flexDirection: 'column', justifyContent: 'center' }}>
+            <Box style={{ background: '#0E3F8C', padding: '14px 22px' }}>
+                <Text style={{ fontSize: 18, color: '#FFFFFF', lineHeight: 1.55 }}>
+                    所以：领域里大量"提升五个点"的结论，在这个默认配置下本来就测不出来。
+                    我们自己的实验，必须先把分辨率讲清楚，再谈效果。
+                </Text>
+            </Box>
+        </Box>
+    </Box>
+</Slide>

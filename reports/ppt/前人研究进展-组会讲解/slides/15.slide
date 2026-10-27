@@ -1,0 +1,51 @@
+<Slide style={{ width: 1280, height: 720, background: '#FFFFFF', padding: 0 }}>
+    <Box style={{ width: 1280, height: 720, flexDirection: 'column' }}>
+        <Box style={{ width: 1280, height: 10, background: '#0E3F8C' }} />
+
+        <Box style={{ width: 1280, height: 478, padding: '62px 96px 0 96px', flexDirection: 'column' }}>
+            <Text style={{ fontSize: 15, color: '#8B97A8', letterSpacing: 2 }}>一句话总结</Text>
+
+            <Box style={{ flexDirection: 'column', marginTop: 16 }}>
+                <Text style={{ fontSize: 46, fontWeight: 'bold', color: '#0E3F8C', lineHeight: 1.42, fontFamily: 'Heiti SC' }}>
+                    我们不是要做更强的策略，
+                    <br />
+                    是要让这条路的强弱
+                </Text>
+                <Text style={{ fontSize: 46, fontWeight: 'bold', color: '#D9534F', lineHeight: 1.42, fontFamily: 'Heiti SC' }}>
+                    可被测量。
+                </Text>
+            </Box>
+
+            <Box style={{ width: 96, height: 4, background: '#1E4FA8', marginTop: 24 }} />
+            <Text style={{ fontSize: 19, color: '#4A5568', lineHeight: 1.7, marginTop: 18, width: 900 }}>
+                可归因，才谈得上 scaling；可复算，才谈得上领先。
+            </Text>
+        </Box>
+
+        <Box style={{ width: 1280, height: 148, padding: '0 96px', flexDirection: 'row', gap: 20 }}>
+            <Box style={{ flex: 1, background: '#F7F9FC', borderTop: '3px solid #1E4FA8', padding: '16px 18px' }}>
+                <Text style={{ fontSize: 15, color: '#8B97A8' }}>需要配合之一</Text>
+                <Text style={{ fontSize: 18, color: '#1A2230', lineHeight: 1.55, marginTop: 6 }}>
+                    一段连续的显卡机时，跑完等值线扫描。
+                </Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#F7F9FC', borderTop: '3px solid #1E4FA8', padding: '16px 18px' }}>
+                <Text style={{ fontSize: 15, color: '#8B97A8' }}>需要配合之二</Text>
+                <Text style={{ fontSize: 18, color: '#1A2230', lineHeight: 1.55, marginTop: 6 }}>
+                    Sawyer 的机时窗口，做真机单演示适配。
+                </Text>
+            </Box>
+            <Box style={{ flex: 1, background: '#F7F9FC', borderTop: '3px solid #D9534F', padding: '16px 18px' }}>
+                <Text style={{ fontSize: 15, color: '#8B97A8' }}>需要配合之三</Text>
+                <Text style={{ fontSize: 18, color: '#1A2230', lineHeight: 1.55, marginTop: 6 }}>
+                    对"阶段判据"的评审意见——这一条不能自己说了算。
+                </Text>
+            </Box>
+        </Box>
+
+        <Box style={{ width: 1280, height: 84, padding: '0 96px 18px 96px', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between' }}>
+            <Text style={{ fontSize: 16, color: '#0E3F8C', fontWeight: 'bold' }}>谢谢，欢迎提问与质疑</Text>
+            <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#1E4FA8' }}>15 / 15</Text>
+        </Box>
+    </Box>
+</Slide>

@@ -10,3 +10,7 @@ build-backup-*/
 # 编辑器 / 工具临时文件
 *.swp
 *~
+
+# slidep 工具缓存（可由 slides/*.slide 重建）
+reports/ppt/**/.cache/
+reports/ppt/**/.slidep/
